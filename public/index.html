@@ -137,7 +137,9 @@
 	</div>
 
 	<script type="text/javascript">
-		const host = `${process.env.PORT}` || "http://localhost:5000/";
+
+		const host = "http://localhost:5000/";
+
 		document.querySelector("#get-video-info-btn").addEventListener("click", function () {
 			let videoURL = document.querySelector("#videoURL").value.trim();
 			if (videoURL.length == 0) {
