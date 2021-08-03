@@ -137,8 +137,7 @@
 	</div>
 
 	<script type="text/javascript">
-	// || "http://localhost:5000/"
-		const host = process.env.PORT ;
+		const host = "http://localhost:5000/";
 		document.querySelector("#get-video-info-btn").addEventListener("click", function () {
 			let videoURL = document.querySelector("#videoURL").value.trim();
 			if (videoURL.length == 0) {
@@ -148,7 +147,7 @@
 			fetch(host + "videoInfo?videoURL=" + videoURL).then(function (response) {
 				return response.json();
 			}).then(function (data) {
-				//console.log(data);
+				console.log(data);
 				let detailsNodes = {
 					thumbnail: document.querySelector(".video-data .thumbnail img"),
 					title: document.querySelector(".video-data .info h2"),
